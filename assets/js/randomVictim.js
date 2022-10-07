@@ -37,7 +37,8 @@ const victims = [
     "Alastair"
 ];
 
-let alreadyPicked = [];
+let alreadyPicked = JSON.parse(localStorage.getItem("alreadyPicked"));
+if (!alreadyPicked) alreadyPicked = [];
 
 function newVictim(){
     let victimEl = document.getElementById("victim");
@@ -48,5 +49,6 @@ function newVictim(){
         if (!alreadyPicked.includes(victim)) break;
     }
     alreadyPicked.push(victim);
+    localStorage.setItem("alreadyPicked", JSON.stringify(alreadyPicked));
     victimEl.innerText = victim;
 }
