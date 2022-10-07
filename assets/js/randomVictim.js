@@ -37,7 +37,16 @@ const victims = [
     "Alastair"
 ];
 
+let alreadyPicked = [];
+
 function newVictim(){
     let victimEl = document.getElementById("victim");
-    victimEl.innerText = victims[Math.floor(Math.random() * victims.length)];
+    let victim = "";
+    if (victims.length === alreadyPicked.length) alreadyPicked = [];
+    while (true){
+        victim = victims[Math.floor(Math.random() * victims.length)];
+        if (!alreadyPicked.includes(victim)) break;
+    }
+    alreadyPicked.push(victim);
+    victimEl.innerText = victim;
 }
