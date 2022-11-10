@@ -34,7 +34,8 @@ const victims = [
     "Mateusz",
     "Esra",
     "Hao",
-    "Alastair"
+    "Alastair",
+    "Michael"
 ];
 
 let alreadyPicked = JSON.parse(localStorage.getItem("alreadyPicked"));
