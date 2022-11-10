@@ -52,3 +52,9 @@ function newVictim(){
     localStorage.setItem("alreadyPicked", JSON.stringify(alreadyPicked));
     victimEl.innerText = victim;
 }
+
+function totallyRandomVictim(){
+    let victimEl = document.getElementById("victim");
+
+    victimEl.innerText = "Diana";
+}
