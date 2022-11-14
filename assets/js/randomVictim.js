@@ -3,7 +3,6 @@ const victims = [
     "Amy",
     "Jordan",
     "Harmanjot",
-    "Netto",
     "Sash",
     "Alex",
     "Salman",
